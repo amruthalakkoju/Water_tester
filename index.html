@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Water Quality Testing Dashboard</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: rgb(218, 212, 223);
+      color: rgb(49, 3, 68);
+    }
+    .top{
+      width: 100%;
+      background-color: rgb(49, 3, 68);
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+    .top h1{
+      font-size: 28px;
+    }
+    .top button{
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: rgb(186, 170, 200);
+      color: rgb(49, 3, 68);
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .top button:hover{
+      background-color: rgb(215, 197, 216);
+    }
+    .container{
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    .card{
+      background-color: rgb(215, 197, 216);
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card h2{
+      margin-bottom: 20px;
+      color: rgb(49, 3, 68);
+    }
+    .form-group{
+      margin-bottom: 18px;
+    }
+    .form-group label{
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .form-group input{
+      width: 100%;
+      padding: 12px;
+      border: 2px solid rgb(136, 112, 142);
+      border-radius: 10px;
+      outline: none;
+      background-color: rgb(218, 212, 223);
+    }
+    .form-group input:focus{
+      border-color: rgb(49, 3, 68);
+    }
+    .check-btn{
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background-color: rgb(49, 3, 68);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .check-btn:hover{
+      background-color: rgb(136, 112, 142);
+    }
+    .result-box{
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .result{
+      margin-top: 25px;
+      padding: 20px;
+      border-radius: 12px;
+      background-color: rgb(186, 170, 200);
+      font-size: 22px;
+      font-weight: bold;
+    }
+    @media(max-width: 768px){
+      .container{
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <h1>Water Quality Tester</h1>
+    <button>Back</button>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>Enter Water Test Values</h2>
+      <div class="form-group">
+        <label>pH Value</label>
+        <input type="number" placeholder="Enter pH value">
+      </div>
+      <div class="form-group">
+        <label>TDS (ppm)</label>
+        <input type="number" placeholder="Enter TDS">
+      </div>
+      <div class="form-group">
+        <label>Turbidity (NTU)</label>
+        <input type="number" placeholder="Enter Turbidity">
+      </div>
+      <div class="form-group">
+        <label>Hardness (mg/L)</label>
+        <input type="number" placeholder="Enter Hardness">
+      </div>
+      <div class="form-group">
+        <label>Chlorine Level (mg/L)</label>
+        <input type="number" placeholder="Enter Chlorine Level">
+      </div>
+      <button class="check-btn">Check Water Quality</button>
+    </div>
+    <div class="card result-box">
+      <h2>Water Safety Status</h2>
+      <div class="result">
+        SAFE
+      </div>
+      <p style="margin-top:20px; line-height:1.6;">
+        The tested water is safe to drink according to the standards.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
